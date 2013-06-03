@@ -2,7 +2,7 @@
 if(session_id() == '') {
     session_start();
 }
-include('../configs.php');
+include(dirname(dirname(__file__)).'/configs.php');
 $con = mysql_connect(DB_HOST, DB_USER, DB_PASS);
 
 if (!$con)
@@ -35,4 +35,6 @@ if ($_POST['new_var_type']=='float'){
 mysql_query($qstring);
 //echo $qstring;
 //echo '<br />Last string is '.mysql_insert_id();
-header('Location: '.URL.'?question_id='.$_GET['question_id']);
+//header('Location: '.URL.'?question_id='.$_GET['question_id']);
+header('Location: '.$_SERVER['HTTP_REFERER']);
+?>

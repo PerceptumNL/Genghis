@@ -4,21 +4,21 @@ if(session_id() == '') {
 }
 //$_REQUEST["user"] = "0a9b8005-8590-11e2-8670-005056933c20";
 
-$debug = 0;
+$debug = $_GET['debug'] : 0;
 
 try {
-	require_once("./sdic_api_client_elearning.class.php");
-	$api = new SDICApiClientELearning();
+	//require_once("./sdic_api_client_elearning.class.php");
+	//$api = new SDICApiClientELearning();
 
-	$api->assignKey("18908eee-90a1-11e2-a8a5-005056933b24");
+	//$api->assignKey("18908eee-90a1-11e2-a8a5-005056933b24");
+    //$user = $api->getUser($_COOKIE["user"]);
 } catch (Exception $e) {
 	echo "Exception: ".$e->getMessage();
 }
-$user = $api->getUser($_COOKIE["user"]);
 //$courses = $api->getCourses(NULL, $user->results->uid);
 $course = $_GET['course'];
 
-include('../configs.php');
+include(dirname(dirname(__file__)).'/configs.php');
 
 $con = mysql_connect(DB_HOST, DB_USER, DB_PASS);
 
@@ -32,8 +32,8 @@ $query = "INSERT INTO
 		VALUES
 		('".$_COOKIE['user']."', '".$course."');";
 if ($debug) {
-	echo $query;
-	echo "<br/>Last inserted ID -->" . mysql_insert_id();
+	//echo $query;
+	//echo "<br/>Last inserted ID -->" . mysql_insert_id();
 } else {
 	mysql_select_db("khan_exercises", $con);
 	mysql_query($query);	

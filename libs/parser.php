@@ -116,7 +116,7 @@ function parse_latex_and_solution($input_string) {
 }
 
 function find_and_parse_latex($input_string) {
-    require_once './libs/ASCIIMath2TeX.php';
+    require_once 'libs/ASCIIMath2TeX.php';
     $AMT = new AMtoTeX;
     //$tex = $AMT->convert($AMstring); //convert ASCIIMath string to TeX
     $final_string = $input_string;
@@ -281,6 +281,7 @@ function process_and_parse(){
      */
     //$fh = fopen("./khan-exercises/exercises/aa.html", 'w') or exit("Unable to open file!");
     //$fh = fopen("/mnt/metadata/khan-exercises/exercises/aa.html", 'w') or exit("Unable to open file!");
+    return;
     $fileLocation = "/var/lib/tomcat6/webapps/khan/exercises/".$course."_".$_SESSION['question_id'].".html";
     echo $fileLocation;
     $fh = fopen($fileLocation, 'w') or exit("Unable to open file!");

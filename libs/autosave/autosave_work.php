@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-include('../../configs.php');
+include dirname(dirname(dirname(__file__))) . '/configs.php';
 $con = mysql_connect(DB_HOST, DB_USER, DB_PASS);
 
 if (!$con)
@@ -22,11 +22,11 @@ $qstring .= " question_check = '" . $_POST["solution_checker"] . "', ";
 $qstring .= " question_error = '" . $_POST["error"] . "', ";
 $qstring .= " question_round = '" . $_POST["round"] . "' ";
 $qstring .= " WHERE question_id =".$_GET['question_id']."";
-echo $qstring;
 mysql_query($qstring);
+mysql_close($con);
 
 
-header('Location: '.URL.'?question_id='.$_GET['question_id']);
+header('Location: '.$_SERVER['HTTP_REFERER']);
 
 mysql_close($con);
 ob_end_flush(); ?>
