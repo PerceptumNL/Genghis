@@ -9,10 +9,12 @@
 
         <h2>Crea un ejercicio</h2>
         <div class="button_return">
+        <!--   
             <form action=<?php echo '"'.URL_GEL.'"'; ?>>
                 <button type="submit">Volver a Ejercicios</button>
                 <p class="warning">¡Asegurate de haber guardado antes!</p>
             </form>
+	-->
         </div>
 
         <p>Aqui podrás crear un ejercicio nuevo de Khan.</p>
@@ -121,18 +123,18 @@ getHintTable();
     <!-- End of tab1 (exercise creation) -->
     <div id="tabs-2">
         <!--<iframe id="ifr" src="http://163.117.69.19:8000/exercises/aa.html" height="700" width="850" seamless></iframe>-->
-        <iframe id="ifr" src=<? echo "\"http://baal.uc3m.es:8080/khan/exercises/".$row['question_course']."_".$_SESSION['question_id'].".html\"";?> height="700" width="850" seamless></iframe>
+        <iframe id="ifr" src=<? echo "\"http://elgg.khanacademie.nl/".$row['question_course']."_".$_SESSION['question_id'].".html\"";?> height="700" width="850" seamless></iframe>
         <!-- <p>La visualización de ejercicios está desactivada temporalmente, lamentamos todos los inconvenientes que esto pueda causar</p> -->
 
     </div>
     <!-- End of tab2 (exercise preview) -->
     <div id="tabs-3">
         <p>Este es el codigo XML del ejercicio de Khan, probablemente no te sirva de mucho</p>
-        <?php include("./libs/parser.php");?>
+        <?php include("libs/parser.php");?>
         <textarea cols="98" rows="40">
             <?php process_and_parse(); ?>
         </textarea>
     </div>
     <!-- End of tab3 (exercise code) -->
 </div>
-<?php include("./libs/tinymceinits.php");?>
+<?php include("libs/tinymceinits.php");?>

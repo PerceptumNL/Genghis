@@ -72,6 +72,7 @@ function newhint(){
         $order = max($hintNames);
     }
     echo "<div class=\"elem\" style=\"display: none;\">";
+//    echo '<form action="'.GENGHIS_LIBS.'/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
     echo '<form action="./libs/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
     echo '<span class="table_edit" style="width: 78px;"><input type="image" src="./libs/img/add.png" border="0" ALT="Submit Form"></span>';
     echo '<span class="table_properties">';
@@ -85,6 +86,7 @@ function newhint(){
  */
 function edithint($order, $id, $text){
     echo "<div class=\"elem\" style=\"display: none;\">";
+//    echo '<form action="'.GENGHIS_LIBS.'/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
     echo '<form action="./libs/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
     echo '<span class="table_edit" style="width: 78px;"><input type="image" src="./libs/img/add.png" border="0" ALT="Submit Form"></span>';
     echo '<span class="table_properties">

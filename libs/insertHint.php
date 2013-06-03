@@ -1,8 +1,15 @@
 <?php 
+//ob_start();
+//
 session_start();
-include('../configs.php');
-$con = mysql_connect(DB_HOST, DB_USER, DB_PASS);
+include(dirname(dirname(__file__)).'/configs.php');
 
+$con = mysql_connect(DB_HOST, DB_USER, DB_PASS);
+error_log(DB_HOST);
+error_log(DB_USER);
+error_log(DB_PASS);
+error_log('Configuracion de la base de datos');
+error_log($con);
 if (!$con)
 {
     die('Could not connect: ' . mysql_error());
@@ -19,10 +26,18 @@ if (isset($_POST['hint_id'])) {
         WHERE 
         `hint_id`=\''.$_POST['hint_id'].'\'';
 } else {
-    $qstring = 'INSERT INTO `khan_hint` (`hint_question`, `hint_text`, `hint_order`) VALUES ('. $_GET['question_id'] .', \''. $_POST['new_hint_text'] .'\', '. $new_order .');';
+    $qstring = 'INSERT INTO `khan_exercises`.`khan_hint` (`hint_question`, `hint_text`, `hint_order`) VALUES ('. $_GET['question_id'] .', \''. $_POST['new_hint_text'] .'\', '. $new_order .');';
 }
 
+error_log($qstring);
 
-mysql_query($qstring);
+$result=mysql_query($qstring);
+error_log($result);
+mysql_close($con);
 
-header('Location: '.URL.'?question_id='.$_GET['question_id']);
+
+//$_SERVER['HTTP_REFERER']
+//ob_end_flush();
+header('Location: '.$_SERVER['HTTP_REFERER']);
+//header('Location: '.URL.'?question_id='.$_GET['question_id']);
+?>
