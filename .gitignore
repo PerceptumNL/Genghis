@@ -7,7 +7,7 @@ libs/example_api.php
 
 # Compiled translations #
 ###################
-.mo
+*.mo
 
 # Compiled source #
 ###################
