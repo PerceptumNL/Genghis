@@ -12,7 +12,7 @@ if (!$con)
 //INSERT INTO `khan_exercises`.`khan_variable` (`variable_question`, `variable_name`, `variable_type`) VALUES ('1', 'asdf', 'float');
 
 mysql_select_db("khan_exercises", $con);
-$qstring = 'INSERT INTO `khan_variable` 
+$qstring = 'INSERT INTO `khan_exercises`.`khan_variable` 
     (`variable_question`, `variable_name`, `variable_type`) VALUES 
     ('. $_GET['question_id'] .', \''. $_POST['new_var_name'] .'\', \''. $_POST['new_var_type'] .'\');';
 mysql_query($qstring);

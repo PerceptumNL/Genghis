@@ -214,7 +214,8 @@ $courses = $api->getCourses(NULL, $user->results->uid);
 include 'libs/header_sdic.php';
 if (isset($_REQUEST['question_id'])) {
     $_SESSION['question_id'] = $_REQUEST['question_id'];
-
+    error_log('question_id');
+    error_log($_SESSION);
     //Page handling
     if ($_GET['page'] != '') {
         $currentActivePages = array('error', 'FillInTheBlank', 'list', 'admin');

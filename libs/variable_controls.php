@@ -3,14 +3,16 @@
  * Echoes (not returns!) the HTML code with all variables
  * It is also the function taking care to fill the array with all current variables
  */
+
+
 function getTable() {
     global $variableNames;
 
     echo '<div class="elem header" style="display: none;">';
-    echo '	<span class="table_delete">Acci&oacute;n</span>';
+    echo '	<span class="table_delete">'._("Acci&oacute;n").'</span>';
     echo '	<span class="table_edit">&nbsp;</span>';
-    echo '	<span class="table_name">Nombre</span>';
-    echo '	<span class="table_properties">Propiedades</span>';
+    echo '	<span class="table_name">'._("Nombre").'</span>';
+    echo '	<span class="table_properties">'._("Propiedades").'</span>';
     echo '</div>';
 
     $resultwhole = mysql_query("SELECT * FROM khan_variable WHERE variable_question=" . $_GET['question_id']);
@@ -30,9 +32,9 @@ function getTable() {
 
             echo "<div class=\"elem\" style=\"display: none;\">";
             echo '<span class="table_edit">
-                <form action="#" method="post"><input type="hidden" name="edit_var_id" value="'.$rowwhole['variable_id'].'"><input type="image" src="./libs/img/edit_icon.png" border="0" ALT="Submit Form"></form>
+                <form action="#" method="post"><input type="hidden" name="edit_var_id" value="'.$rowwhole['variable_id'].'"><input type="image" src="../../../mod/genghis/Genghis/libs/img/edit_icon.png" border="0" ALT="Submit Form"></form>
                 </span><span class="table_delete">
-                <form action="#" method="post"><input type="hidden" name="delete_var_id" value="'.$rowwhole['variable_id'].'"><input type="image" src="./libs/img/delete.png" border="0" ALT="Submit Form"></form>
+                <form action="#" method="post"><input type="hidden" name="delete_var_id" value="'.$rowwhole['variable_id'].'"><input type="image" src="../../../mod/genghis/Genghis/libs/img/delete.png" border="0" ALT="Submit Form"></form>
                 </span>';
             echo '<span class="table_name">' . $rowwhole['variable_name'] . '</span>';
             //Save the name!
@@ -61,10 +63,12 @@ function getProperties($variableId, $variableType) {
 
     //What kind of number is it?
     if ($variableType == 'integer') {
-        return 'N&uacute;mero entero aleatorio (desde ' . $result['integer_min'] . ' hasta ' . $result['integer_max'] . ')';
+        echo _('N&uacute;mero entero aleatorio (desde ') . $result['integer_min'] .  _(' hasta ') . $result['integer_max'];
+        //return 
     } elseif ($variableType == 'float'){
 
-        return 'N&uacute;mero decimal aleatorio (desde ' . $result['float_min'] . ' hasta ' . $result['float_max'] . ') con una raz&oacute;n de &plusmn; ' . $result['float_step'];
+        echo _('N&uacute;mero decimal aleatorio (desde ') . $result['float_min'] . _(' hasta ') . $result['float_max'] . _(' con una raz&oacute;n de &plusmn; ') . $result['float_step'];
+	//return
     }
 
 }
@@ -75,20 +79,20 @@ function getProperties($variableId, $variableType) {
 function newVariable(){
     echo "<div class=\"elem\" style=\"display: none;\">";
     echo '<form action="./libs/insertVariable.php?question_id='.$_GET['question_id'].'" method="post">';
-    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="./libs/img/add.png" border="0" ALT="Submit Form"></span>';
+    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="../../../mod/genghis/Genghis/libs/img/add.png" border="0" ALT="Submit Form"></span>';
     echo '<span class="table_name"><input type="text" name="new_var_name" id="new_var_name" style="width:90px;" required></span>';
-    echo '<span class="table_properties">
-        N&uacute;mero
-        <select name="new_var_type" id="new_var_type" onChange="remove_textbox()">
-        <option value="integer">entero</option>
-        <option value="float">decimal</option>
+    echo '<span class="table_properties">'
+        ._("N&uacute;mero")
+        .'<select name="new_var_type" id="new_var_type" onChange="remove_textbox()">
+        <option value="integer">'._("entero").'</option>
+        <option value="float">'._("decimal").'</option>
         </select>
-        aleatorio (desde
-        <input type="number" name="new_var_min" id="new_var_min" style="width:50px;" required step="any">
-        hasta
-        <input type="number" name="new_var_max" id="new_var_max" style="width:50px;" required step="any">
-    )<span id="step_string"> con una raz&oacute;n de&plusmn;  
-    <input type="number" name="new_var_step" id="new_var_step" style="width:50px;" step="any" >
+        '._("aleatorio (desde")
+        .'<input type="number" name="new_var_min" id="new_var_min" style="width:50px;" required step="any">'
+        ._("hasta")
+        .'<input type="number" name="new_var_max" id="new_var_max" style="width:50px;" required step="any">'
+        ._(')').'<span id="step_string">'._(" con una raz&oacute;n de&plusmn;")
+    .'<input type="number" name="new_var_step" id="new_var_step" style="width:50px;" step="any" >
     </span></span>';
     echo "</form></div>";
 }
@@ -103,7 +107,7 @@ function editVariable($current){
 
     echo "<div class=\"elem\" style=\"display: none;\">";
     echo '<form action="./libs/editVariable.php?question_id='.$_GET['question_id'].'" method="post">';
-    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="./libs/img/add.png" border="0" ALT="Submit Form"></span>';
+    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="../../../mod/genghis/Genghis/libs/img/add.png" border="0" ALT="Submit Form"></span>';
     echo '<span class="table_name"><input type="text" name="new_var_name" value="' . $current['variable_name'] . '" id="new_var_name" style="width:90px;"></span>';
     echo '<span class="table_properties">
         N&uacute;mero ';
