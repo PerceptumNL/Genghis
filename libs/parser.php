@@ -281,9 +281,13 @@ function process_and_parse(){
      */
     //$fh = fopen("./khan-exercises/exercises/aa.html", 'w') or exit("Unable to open file!");
     //$fh = fopen("/mnt/metadata/khan-exercises/exercises/aa.html", 'w') or exit("Unable to open file!");
-    return;
-    $fileLocation = "/var/lib/tomcat6/webapps/khan/exercises/".$course."_".$_SESSION['question_id'].".html";
+    //return;
+    //include("../../../Genghis/configs.php");
+    //include(dirname(dirname(__file__)).'/configs.php');
+    $fileLocation = "/home/ubuntu/Elgg/mod/genghis/khan-exercises/exercises/".$course."_".$_SESSION['question_id'].".html";
     echo $fileLocation;
+    error_log('filelocation');
+    error_log($filelocation);
     $fh = fopen($fileLocation, 'w') or exit("Unable to open file!");
     fwrite($fh, $super_String);
     fclose($fh);
