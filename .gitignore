@@ -43,3 +43,12 @@ libs/example_api.php
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Localization #
+################
+*.mo
+
+# vim #
+#######
+*.sw?
+

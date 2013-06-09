@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-09 13:22+0000\n"
+"PO-Revision-Date: 2013-06-05 12:46+0100\n"
+"Last-Translator: Sergio <sergio@perceptum.nl>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: controllers/FillInTheBlank.php:4
+msgid "Ejercicio"
+msgstr "Exercise"
+
+#: controllers/FillInTheBlank.php:5
+msgid "Visualizació previa"
+msgstr "Preview"
+
+#: controllers/FillInTheBlank.php:10
+msgid "Crea un ejercicio"
+msgstr "Create an exercise"
+
+#: controllers/FillInTheBlank.php:20
+msgid "Aqui podrás crear un ejercicio nuevo de Khan."
+msgstr "Here you can create a new Khan exercise."
+
+#: controllers/FillInTheBlank.php:28
+msgid "Variables"
+msgstr "Variables"
+
+#: controllers/FillInTheBlank.php:41
+msgid "Titulo"
+msgstr "Title"
+
+#: controllers/FillInTheBlank.php:65
+msgid "Enunciado"
+msgstr "Statement"
+
+#: controllers/FillInTheBlank.php:76
+msgid "Solucion"
+msgstr "Solution"
+
+#: controllers/FillInTheBlank.php:79
+msgid "Nota: ¡Es importante que la solución esté siempre re comillas"
+msgstr "Note: It's really important for the solution to be between quotes"
+
+#: controllers/FillInTheBlank.php:86
+msgid "Y esta solución redondeada "
+msgstr "And this solution rounded"
+
+#: controllers/FillInTheBlank.php:87
+msgid "decimal y acepta un error de"
+msgstr "decimal and accepted an error of"
+
+#: controllers/FillInTheBlank.php:93
+msgid "Enseñar la solución en el enuncio, solo para pruebas"
+msgstr "Show the solution in the statement, only for tests."
+
+#: controllers/FillInTheBlank.php:100
+msgid "Guardar título, enunciado y solucon"
+msgstr "Save title, statement and solution"
+
+#: controllers/FillInTheBlank.php:106
+msgid "Pistas"
+msgstr "Hints"
+
+#: controllers/FillInTheBlank.php:132
+msgid ""
+"Este es el codigo XML del ejercicio de Khan, probablemente no te sirva de "
+"mucho"
+msgstr ""
+"This is the XML code of the Khan exercise, probably it won't be very useful"
+
+#: libs/hint_controls.php:10
+msgid "Acci&oacuten"
+msgstr "Action"
+
+#: libs/hint_controls.php:13
+msgid "Pista"
+msgstr "Hint"
+
+#: libs/variable_controls.php:12
+msgid "Acci&oacute;n"
+msgstr "Action"
+
+#: libs/variable_controls.php:14
+msgid "Nombre"
+msgstr "Name"
+
+#: libs/variable_controls.php:15
+msgid "Propiedades"
+msgstr "Properties"
+
+#: libs/variable_controls.php:66
+msgid "N&uacute;mero entero aleatorio (desde "
+msgstr "Random integer number between "
+
+#: libs/variable_controls.php:66 libs/variable_controls.php:70
+msgid " hasta "
+msgstr " and "
+
+#: libs/variable_controls.php:70
+msgid "N&uacute;mero decimal aleatorio (desde "
+msgstr "Decimal random number between "
+
+#: libs/variable_controls.php:70
+msgid " con una raz&oacute;n de &plusmn; "
+msgstr " with a step of "
+
+#: libs/variable_controls.php:85
+msgid "N&uacute;mero"
+msgstr "Number"
+
+#: libs/variable_controls.php:87
+msgid "entero"
+msgstr "integer"
+
+#: libs/variable_controls.php:88
+msgid "decimal"
+msgstr "decimal"
+
+#: libs/variable_controls.php:90
+msgid "aleatorio (desde"
+msgstr "random (between"
+
+#: libs/variable_controls.php:92
+msgid "hasta"
+msgstr "and"
+
+#: libs/variable_controls.php:94
+msgid ")"
+msgstr ")"
+
+#: libs/variable_controls.php:94
+msgid " con una raz&oacute;n de&plusmn;"
+msgstr "with a step of"

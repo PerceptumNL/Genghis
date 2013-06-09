@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-05 14:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libs/variable_controls.php:12
+msgid "Acci&oacute;n"
+msgstr ""
+
+#: libs/variable_controls.php:66
+msgid "N&uacute;mero entero aleatorio (desde "
+msgstr ""
+
+#: libs/variable_controls.php:66 libs/variable_controls.php:70
+msgid " hasta "
+msgstr ""
+
+#: libs/variable_controls.php:70
+msgid "N&uacute;mero decimal aleatorio (desde "
+msgstr ""
+
+#: libs/variable_controls.php:70
+msgid " con una raz&oacute;n de &plusmn; "
+msgstr ""

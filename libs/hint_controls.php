@@ -7,10 +7,10 @@ $hintNames = array();
 function getHintTable() {
     global $hintNames;
     echo '<div class="elem header" style="display: none;">';
-    echo '	<span class="table_delete">Acci&oacuten</span>';
+    echo '	<span class="table_delete">'._('Acci&oacuten').'</span>';
     echo '	<span class="table_edit">&nbsp;</span>';
     echo '	<span class="table_name">&nbsp;</span>';
-    echo '	<span class="table_properties">Pista</span>';
+    echo '	<span class="table_properties">'._('Pista').'</span>';
     echo '</div>';
 
     $resultwhole = mysql_query("SELECT * FROM khan_hint WHERE hint_question=" . $_GET['question_id']);
@@ -39,12 +39,12 @@ function getHintTable() {
                 echo '<span class="table_edit">
                     <form action="#" method="post">
                     <input type="hidden" name="edit_hint_id" value="'.$hint[0].'">
-                    <input type="image" src="./libs/img/edit_icon.png" border="0" ALT="Submit Form">
+                    <input type="image" src="../../../mod/genghis/Genghis/libs/img/edit_icon.png" border="0" ALT="Submit Form">
                     </form>
                     </span><span class="table_delete">
                     <form action="#" method="post">
                     <input type="hidden" name="delete_var_id" value="'.$hint[0].'">
-                    <input type="image" src="./libs/img/delete.png" border="0" ALT="Submit Form">
+                    <input type="image" src="../../../mod/genghis/Genghis/libs/img/delete.png" border="0" ALT="Submit Form">
                     </form>
                     </span>';
                 echo '<span class="table_name">' . $or . '</span>';
@@ -74,7 +74,7 @@ function newhint(){
     echo "<div class=\"elem\" style=\"display: none;\">";
 //    echo '<form action="'.GENGHIS_LIBS.'/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
     echo '<form action="./libs/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
-    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="./libs/img/add.png" border="0" ALT="Submit Form"></span>';
+    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="../../../mod/genghis/Genghis/libs/img/add.png" border="0" ALT="Submit Form"></span>';
     echo '<span class="table_properties">';
     echo '<textarea class="tinymce_hint" rows="3" cols="80" name="new_hint_text" id="new_hint_text"></textarea>';
     echo '<input type="hidden" name="hint_order" value="'.$order.'">';
@@ -88,7 +88,7 @@ function edithint($order, $id, $text){
     echo "<div class=\"elem\" style=\"display: none;\">";
 //    echo '<form action="'.GENGHIS_LIBS.'/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
     echo '<form action="./libs/insertHint.php?question_id='.$_GET['question_id'].'" method="post">';
-    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="./libs/img/add.png" border="0" ALT="Submit Form"></span>';
+    echo '<span class="table_edit" style="width: 78px;"><input type="image" src="../../../mod/genghis/Genghis/libs/img/add.png" border="0" ALT="Submit Form"></span>';
     echo '<span class="table_properties">
         <textarea class="tinymce_hint" rows="3" cols="80" name="new_hint_text" id="new_hint_text">'.$text.'</textarea>
         <input type="hidden" name="hint_order" value="'.$order.'">
