@@ -1,0 +1,28 @@
+
+<?php
+global $CONFIG;
+define("DB_HOST", $CONFIG->dbhost);
+define("DB_USER", $CONFIG->dbuser);
+define("DB_PASS", $CONFIG->dbpass);
+define("URL_GEL", "/save.php");
+define("URL", "http://elgg.khanacademie.nl");
+define("EXERCISES_PATH", "/home/ubuntu/Elgg/mod/genghis/khan-exercises");
+define("EXERCISES_URL", "http://elgg.khanacademie.nl/mod/genghis/khan-exercises/exercises/");
+
+// Set language to German
+putenv('LC_ALL=en_US');
+setlocale(LC_ALL, 'en_US');
+setlocale(LC_MESSAGES, 'en_US');
+
+$directory = dirname(__file__)."/locale";
+$domain = 'messages';
+
+// Specify location of translation tables
+bindtextdomain($domain, $directory);
+
+// Choose domain
+textdomain($domain);
+bind_textdomain_codeset($domain, 'UTF-8');
+
+?>
+
