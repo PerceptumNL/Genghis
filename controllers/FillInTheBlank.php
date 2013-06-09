@@ -123,7 +123,7 @@ getHintTable();
     <!-- End of tab1 (exercise creation) -->
     <div id="tabs-2">
         <!--<iframe id="ifr" src="http://163.117.69.19:8000/exercises/aa.html" height="700" width="850" seamless></iframe>-->
-        <iframe id="ifr" src=<? echo EXERCISES_URL.$row['question_course']."_".$_SESSION['question_id'].".html\"";?> height="700" width="850" seamless></iframe>
+        <iframe id="ifr" src=<? echo EXERCISES_URL.$row['question_course']."_".$_SESSION['question_id'].".html";?> height="700" width="850" seamless></iframe>
         <!-- <p>La visualización de ejercicios está desactivada temporalmente, lamentamos todos los inconvenientes que esto pueda causar</p> -->
 
     </div>
